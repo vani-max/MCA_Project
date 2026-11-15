@@ -1,0 +1,7 @@
+# Simulation binaries and temporary artifacts
+*.o
+*.out
+sim_*
+m1_ipath/sim_*
+m1_ipath/waves/sim_*
+.DS_Store
