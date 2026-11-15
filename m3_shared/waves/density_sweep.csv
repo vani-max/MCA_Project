@@ -1,0 +1,6 @@
+density_pct,instructions,load_store,conflicts,shared_cycles,harvard_cycles,shared_cpi,harvard_cpi,slowdown_pct
+0,100,0,0,101,101,1.01,1.01,0
+25,100,25,25,126,101,1.26,1.01,24
+50,100,50,50,151,101,1.51,1.01,49
+75,100,75,75,176,101,1.76,1.01,74
+100,100,100,99,200,101,2.00,1.01,98
