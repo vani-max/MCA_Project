@@ -4,4 +4,6 @@
 sim_*
 m1_ipath/sim_*
 m1_ipath/waves/sim_*
+m2_dpath/sim_*
+m2_dpath/waves/sim_*
 .DS_Store
