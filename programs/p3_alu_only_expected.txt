@@ -1,0 +1,22 @@
+# Expected Results for p3_alu_only
+# Dynamic instructions retired: 90
+# Total Loads: 0
+# Total Stores: 0
+
+[REGISTERS]
+x1  = 0x000003db (987)
+x2  = 0x0000063d (1597)
+x3  = 0x0000063d (1597)
+x4  = 0x00000a18 (2584)
+x5  = 0x0000063d (1597)
+x6  = 0x00000218 (536)
+x7  = 0x00000e3d (3645)
+x8  = 0x00000242 (578)
+x9  = 0x00000bfb (3067)
+x10 = 0x00000239 (569)
+x12 = 0x000003fb (1019)
+x13 = 0x00000397 (919)
+x14 = 0x000005d9 (1497)
+x15 = 0x000001fe (510)
+
+[DATA_MEMORY]

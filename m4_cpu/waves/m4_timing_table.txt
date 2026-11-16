@@ -1,0 +1,16 @@
+==============================================================================================================
+ Project 9 Member 4 (M4) CPU Core Timing and Pipeline Execution Table
+==============================================================================================================
+Cyc  Time   PC (IF)    EX PC      Instruction Executing      ALU Out    DMem Addr  R/W   Stall  Halt  Note
+--------------------------------------------------------------------------------------------------------------
+1    10ns   0x00000000 0x00000000 NOP                        0x00000000 0x00000000 -     0      0     Reset deasserted; Fetch instr 0
+2    20ns   0x00000004 0x00000000 addi x1, x0, 15            0x0000000f 0x00000000 -     0      0     EX: x1 <= 15; IF: fetch instr 1
+3    30ns   0x00000008 0x00000004 lui x7, 0x10000            0x10000000 0x00000000 -     0      0     EX: x7 <= 0x1000_0000; IF: fetch instr 2
+4    40ns   0x0000000c 0x00000008 sw x1, 0(x7)               0x10000000 0x10000000 W     0      0     EX: MEM[0x1000_0000] <= x1; IF: fetch instr 3
+5    50ns   0x00000010 0x0000000c lw x8, 0(x7)               0x10000000 0x10000000 R     0      0     EX: Load requested; MEM returns 15
+6    60ns   0x00000010 0x0000000c lw x8, 0(x7) [STALL]       0x10000000 0x10000000 R     1      0     dmem_ready=0 stall injected; PC & EX hold
+7    70ns   0x00000014 0x00000010 beq x1, x8, +8             0x00000000 0x00000000 -     0      0     dmem_ready=1 -> x8 <= 15; BEQ evaluated: taken!
+8    80ns   0x00000018 0x00000018 BUBBLE (flush)             0x00000000 0x00000000 -     0      0     Branch penalty bubble; PC redirected to target
+9    90ns   0x0000001c 0x00000018 addi x9, x0, 222           0x000000de 0x00000000 -     0      0     Target executed: x9 <= 222; IF fetch next
+10   100ns  0x00000020 0x0000001c HALT                       0x00000000 0x00000000 -     0      1     HALT executed: halt=1 asserted; CPU stops
+==============================================================================================================

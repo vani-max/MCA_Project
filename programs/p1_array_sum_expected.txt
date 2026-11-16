@@ -1,0 +1,28 @@
+# Expected Results for p1_array_sum
+# Dynamic instructions retired: 86
+# Total Loads: 16
+# Total Stores: 1
+
+[REGISTERS]
+x10 = 0x10000000 (268435456)
+x11 = 0x00000550 (1360)
+x13 = 0x000000a0 (160)
+
+[DATA_MEMORY]
+MEM[0x10000000] (word 0 ) = 0x0000000a (10)
+MEM[0x10000004] (word 1 ) = 0x00000014 (20)
+MEM[0x10000008] (word 2 ) = 0x0000001e (30)
+MEM[0x1000000c] (word 3 ) = 0x00000028 (40)
+MEM[0x10000010] (word 4 ) = 0x00000032 (50)
+MEM[0x10000014] (word 5 ) = 0x0000003c (60)
+MEM[0x10000018] (word 6 ) = 0x00000046 (70)
+MEM[0x1000001c] (word 7 ) = 0x00000050 (80)
+MEM[0x10000020] (word 8 ) = 0x0000005a (90)
+MEM[0x10000024] (word 9 ) = 0x00000064 (100)
+MEM[0x10000028] (word 10) = 0x0000006e (110)
+MEM[0x1000002c] (word 11) = 0x00000078 (120)
+MEM[0x10000030] (word 12) = 0x00000082 (130)
+MEM[0x10000034] (word 13) = 0x0000008c (140)
+MEM[0x10000038] (word 14) = 0x00000096 (150)
+MEM[0x1000003c] (word 15) = 0x000000a0 (160)
+MEM[0x10000040] (word 16) = 0x00000550 (1360)
