@@ -6,4 +6,8 @@ m1_ipath/sim_*
 m1_ipath/waves/sim_*
 m2_dpath/sim_*
 m2_dpath/waves/sim_*
+m4_cpu/sim_*
+m4_cpu/waves/sim_*
+__pycache__/
+*.pyc
 .DS_Store
